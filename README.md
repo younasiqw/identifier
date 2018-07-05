@@ -9,6 +9,7 @@ plan of the device separately on the map <br>
 device search <br>
 connecting remote computers in the management system <br>
 blocke any device <br>
+set time for sending the locations <br>
 
 1) Installation instructions <br><br>
    
@@ -27,10 +28,10 @@ blocke any device <br>
       in his case wan do not forget to do it open the port in router <br><br>
       
       
-   ii)  Finding a Computer Location <br>
-    For the operation of the program on tablets and mobile phones o the user should have a connection to the internet such as wifi or  the cellular data and have opened the location for precise positioning <br><br>
+   ii)  Find tablet and mobile phone location <br>
+    To run the program on tablets and mobile phones, the user should have an Internet connection such as wifi or cellular data and have opened its location or the gps to your find its exact location <br><br>
    
-   iii) Find tablet and mobile phone location <br>
+   iii) Finding a Computer Location <br>
    To identify computers and laptops you need one connection to the Internet. The location here may vary a few meters because you do not use gps as on tablets and cell phones <br><br>
   
 ![screenshots/1](screenshots/1.png) <br><br>
