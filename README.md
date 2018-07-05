@@ -33,3 +33,11 @@ blocke any device <br>
    iii) Find tablet and mobile phone location <br>
    To identify computers and laptops you need one connection to the Internet. The location here may vary a few meters because you do not use gps as on tablets and cell phones <br><br>
   
+![screenshots/1](screenshots/1.png) <br><br>
+![screenshots/2](screenshots/2.png) <br><br>
+![screenshots/3](screenshots/3.png) <br><br>
+![screenshots/4](screenshots/4.png) <br><br>
+![screenshots/5](screenshots/5.png) <br><br>
+![screenshots/6](screenshots/6.png) <br><br>
+![screenshots/7](screenshots/7.png) <br><br>
+![screenshots/8](screenshots/8.png) <br><br>
