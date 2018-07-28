@@ -15,7 +15,7 @@ set time for sending the locations <br>
    
   i) Import the file database.sql from sql folder to your database system <br>
   ii) Copy the identifier program and paste in one folder into /var/www/ <br>
-  iii) The identifier program is ready for use <br.<br> <br>
+  iii) The identifier program is ready for use <br><br> <br>
   
  
 2) To find the location of the devices <br><br>
