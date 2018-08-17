@@ -130,6 +130,24 @@ try:
     <link href="assets/css/themify-icons.css" rel="stylesheet"> 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+<style>
+
+#a
+{
+color: blue;
+}
+
+
+#a:hover
+{
+color:red;
+}
+
+
+</style>
+
+
 </head>
 <body>
 
@@ -369,14 +387,26 @@ try:
                <div class="col-md-12">
                    <div class="card">
                      <div class="header">
-                       <h4 class="title" align="center"> Links for find the location </h4>
+                       <h4 class="title" align="center"> 
+                         <i class="fa fa-link"></i> Links for find the location 
+                       </h4>
                          <br>
-                         <p align="center"> Link on lan: <font color="blue"> """+str(link_lan)+""" </font> </p>
-                         <p align="center"> Link on wan: <font color="blue"> """+str(link_wan)+""" </font> </p>
-                         <p>&nbsp;</p>
-                      </div>                     
-                   </div>
-                </div>
+
+                  <p align="center">
+                     <i class="fa fa-external-link"></i>
+                     Link on lan: &nbsp;
+                     <a href="" id="a" onclick="copy(this)"> """+str(link_lan)+""" </a>
+                  </p>
+
+                 <p align="center"> 
+                    <i class="fa fa-external-link"></i>
+                    Link on wan:  &nbsp;
+                    <a href="" id='a' onclick="copy(this)"> """+str(link_wan)+""" </a> 
+                 </p> 
+                 <p>&nbsp;</p>
+               </div>                     
+             </div>
+           </div>
           
 
 
@@ -500,6 +530,21 @@ try:
     	});
 	</script>
          
+ 
+
+       <script>
+           function copy(that)
+           {
+            var inp =document.createElement('input');
+            document.body.appendChild(inp)
+            inp.value =that.textContent
+            inp.select();
+            document.execCommand('copy',false);
+            alert("Copied the text: " + inp.value);
+            inp.remove();
+             }
+
+       </script>
  
 
 </html>
