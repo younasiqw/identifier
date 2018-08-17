@@ -540,7 +540,7 @@ color:red;
             inp.value =that.textContent
             inp.select();
             document.execCommand('copy',false);
-            alert("Copied the text: " + inp.value);
+            alert("Copy link: " + inp.value);
             inp.remove();
              }
 
