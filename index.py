@@ -25,6 +25,8 @@ import os
 import sys
 import MySQLdb
 import requests
+import subprocess
+from requests import get
 sys.path.insert(0, '__DEV__/')
 import administrator
 from connect import CONNECTION
@@ -49,6 +51,32 @@ sql_mode = """select mode,time_of_renewal from system_settings where id = '%s'""
 sql_devices = """select count(distinct device_id) from devices"""
 
 sql_locations = """select count(all_info) from devices"""
+
+
+protocol = os.environ['SERVER_PORT']
+
+if protocol == '443':
+   protocol = 'https://'
+
+elif protocol == '80':
+     protocol = 'http://'
+
+ip_lan = subprocess.check_output(['hostname', '-s', '-I'])
+ip_lan = ip_lan.decode('utf-8') 
+ip_lan = ip_lan[:-1]
+
+ip_wan = get('https://api.ipify.org').text
+
+
+
+link_lan = protocol + ip_lan  + '/identification/' + 'TMP_LOCATION/' 
+
+link_wan = protocol + ip_wan  + '/identification/' + 'TMP_LOCATION/' 
+
+
+
+
+
 
 try:
    cursor.execute(sql_mode)
@@ -329,6 +357,7 @@ try:
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="footer">
                                     <hr />
                                     <div class="stats"> 
@@ -342,6 +371,21 @@ try:
                     </div>
                 </div>
                 <div class="row">
+
+           
+               <div class="col-md-12">
+                   <div class="card">
+                     <div class="header">
+                       <h4 class="title" align="center"> Links for find the location </h4>
+                         <br>
+                         <p align="center"> Link on lan: <font color="blue"> """+str(link_lan)+""" </font> </p>
+                         <p align="center"> Link on wan: <font color="blue"> """+str(link_wan)+""" </font> </p>
+                         <p>&nbsp;</p>
+                      </div>                     
+                   </div>
+                </div>
+          
+
 
                     <div class="col-md-12">
                         <div class="card">
@@ -366,6 +410,8 @@ try:
                         </div>
                     </div>
                 </div>
+
+
                 <div class="row">
                     <div class="col-md-6">
                         <div class="card">

@@ -278,6 +278,7 @@ padding: 0;
                                     	<th> Fingerprint </th>
                                     	<th> Location (lat, lon)</th>
                                         <th> On The Map </th>
+                                        <th> Delete Devices </th>
                                     </thead>
                                   <tbody>"""
                                    
@@ -285,6 +286,7 @@ padding: 0;
 
 
    for row_devices in result_devices:
+       delete_device_id = row_devices[0]
        instant  = row_devices[3]
        device_id = row_devices[1]
        last_ip   = row_devices[2]
@@ -307,6 +309,11 @@ padding: 0;
        print' <form action="devices_locations_map.py" target="_blank">'
        print' <button type="submit" name="map_location" class="btn btn-primary btn-md" value="%s"> View Device <i class="fa fa-eye"></i> </button>'%(location_on_map)
        print' </form>'
+       print'  </td>' 
+       print'  <td>'
+       print' <form action="__ROOT__/delete_device.py">'
+       print' <button type="submit" name="delete_device_id" class="btn btn-dangerous btn-md" value="%s"> Delete Device <i class="fa fa-trash"></i> </button>'%(delete_device_id)
+       print' </form>'
        print'  </td>'
        print' </tr>'
        print'</tbody>' 
@@ -325,37 +332,15 @@ print """
                             </div>
                         </div>
                     </div>
-   
 
-    <!--
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
 
-                        <li>
-                            <a href="http://www.creative-tim.com">
-                                Creative Tim
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://blog.creative-tim.com">
-                               Blog
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.creative-tim.com/license">
-                                Licenses
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-				<div class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>
-                </div>
-            </div>
-        </footer>
-        -->
+    <div align="center">
+     <form action="__ROOT__/delete_devices.py">
+       <button type="submit" name="delete_devices" class="btn btn-dangerous btn-md" value="all"> 
+          Delete all devices locations <i class="fa fa-trash"></i> 
+       </button>
+     </form>
+   </div>
 
 
     </div>
