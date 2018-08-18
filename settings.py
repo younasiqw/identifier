@@ -371,11 +371,11 @@ try:
    cursor.execute(sql)
    db.commit()
 
-   if os.environ['REQUEST_URI'] != '/identification/settings.py':
+   if os.environ['REQUEST_URI'] != '/settings.py':
       print '''<script>
             alert('The time has been activated');
            </script>
-            <script>location.href='settings.py'</script>'''
+            <script>location.href='/settings.py'</script>'''
       
      # print os.environ["REQUEST_URI"]
 
