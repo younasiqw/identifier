@@ -58,11 +58,11 @@ try:
 
    
 
-   if os.environ['REQUEST_URI'] != '/identification/__ROOT__/delete_device.py':
+   if os.environ['REQUEST_URI'] != '__ROOT__/delete_device.py':
       print '''<script>
             alert('The device location was deleted');
            </script>
-            <script>location.href='/identification/devices_locations.py'</script>'''
+            <script>location.href='/devices_locations.py'</script>'''
       
      # print os.environ["REQUEST_URI"]
 

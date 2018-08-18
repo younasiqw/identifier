@@ -58,11 +58,11 @@ try:
 
    
 
-   if os.environ['REQUEST_URI'] != 'identification/__ROOT__/block_device.py':
+   if os.environ['REQUEST_URI'] != '__ROOT__/block_device.py':
       print '''<script>
             alert('The device was blocked');
            </script>
-            <script>location.href='/identification/remote_control.py'</script>'''
+            <script>location.href='/remote_control.py'</script>'''
       
      # print os.environ["REQUEST_URI"]
 

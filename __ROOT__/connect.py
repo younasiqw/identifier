@@ -29,8 +29,8 @@ print 'Content-type:text/html\r\n\r\n'
 class CONNECTION:
   def __init__(self, host, user, passw, dbs):
     self.host  =  "localhost"
-    self.user  =  "identifier"
-    self.passw =  "identifier"
-    self.dbs   =  "identifier"    
+    self.user  =  "python_mysql"
+    self.passw =  "python_mysql"
+    self.dbs   =  "python_mysql"    
 
 

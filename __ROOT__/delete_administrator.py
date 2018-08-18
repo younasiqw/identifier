@@ -59,11 +59,11 @@ try:
 
    
 
-   if os.environ['REQUEST_URI'] != '/identification/__ROOT__/delete_administrator.py':
+   if os.environ['REQUEST_URI'] != '__ROOT__/delete_administrator.py':
       print '''<script>
             alert('The administrator was deleted from the system');
            </script>
-            <script>location.href='/identification/task_manager.py'</script>'''
+            <script>location.href='/task_manager.py'</script>'''
       
      # print os.environ["REQUEST_URI"]
 

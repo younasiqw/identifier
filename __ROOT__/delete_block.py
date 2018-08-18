@@ -58,11 +58,11 @@ try:
 
    
 
-   if os.environ['REQUEST_URI'] != '/identification/__ROOT__/delete_block.py':
+   if os.environ['REQUEST_URI'] != '__ROOT__/delete_block.py':
       print '''<script>
             alert('The device was unblocked');
            </script>
-            <script>location.href='/identification/task_manager.py'</script>'''
+            <script>location.href='/task_manager.py'</script>'''
       
      # print os.environ["REQUEST_URI"]
 

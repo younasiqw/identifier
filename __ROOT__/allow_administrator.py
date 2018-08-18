@@ -57,11 +57,11 @@ try:
 
    
 
-   if os.environ['REQUEST_URI'] != 'identification/__ROOT__/allow_administrator.py':
+   if os.environ['REQUEST_URI'] != '__ROOT__/allow_administrator.py':
       print '''<script>
             alert('Administrator import completed');
            </script>
-            <script>location.href='/identification/remote_control.py'</script>'''
+            <script>location.href='/remote_control.py'</script>'''
       
      # print os.environ["REQUEST_URI"]
 

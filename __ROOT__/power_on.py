@@ -50,11 +50,11 @@ try:
    cursor.execute(sql)
    db.commit()
 
-   if os.environ['REQUEST_URI'] != 'identification/__ROOT__/power_on.py':
+   if os.environ['REQUEST_URI'] != '__ROOT__/power_on.py':
       print '''<script>
             alert('The mode has been activated');
            </script>
-            <script>location.href='/identification/index.py'</script>'''
+            <script>location.href='/index.py'</script>'''
       
 
 except:
